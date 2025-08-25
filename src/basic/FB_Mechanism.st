@@ -13,6 +13,7 @@ METHOD SetPower
 VAR_INPUT
     power : BOOL;
 END_VAR
+
     _power := power;
 END_METHOD
 
