@@ -23,3 +23,28 @@ END_VAR
         ResetWaitingFeedback();
     END_IF
 
+METHOD GetReceivedFeedback : BOOL
+VAR_INPUT
+END_VAR
+    GetReceivedFeedback := _xFeedbackReceived;
+END_METHOD
+
+(* Получение статуса флага ожидания сигнала обратной связи*)
+METHOD GetWaitingFeedback : BOOL
+VAR_INPUT
+END_VAR
+    GetWaitingFeedback := _xWaitingFeedback;
+END_METHOD
+
+METHOD ResetReceivedFeedback
+VAR_INPUT
+END_VAR
+    _xFeedbackReceived := FALSE;
+END_METHOD
+
+(* Ресет статуса флага ожидания сигнала обратной связи*)
+METHOD ResetWaitingFeedback
+VAR_INPUT
+END_VAR
+    _xWaitingFeedback := FALSE;
+END_METHOD
