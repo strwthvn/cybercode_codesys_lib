@@ -1,0 +1,22 @@
+FUNCTION_BLOCK FB_BasicSignal
+VAR_INPUT
+	ixSignal : BOOL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+
+METHOD GetInvertedSignal : BOOL
+VAR_INPUT
+END_VAR
+	GetInvertedSignal := NOT ixSignal;
+END_METHOD
+
+METHOD GetSignal : BOOL
+VAR_INPUT
+END_VAR
+	GetSignal := ixSignal;
+END_METHOD
+
+END_FUNCTION_BLOCK
