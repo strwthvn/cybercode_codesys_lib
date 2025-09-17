@@ -5,7 +5,7 @@ VAR_OUTPUT
 END_VAR
 VAR
     _ton_RattlingSignal : TON;
-    _outSignal : BOOL;
+    _xOutSignal : BOOL;
 END_VAR
 
 _ton_RattlingSignal(IN:=GetSignal(), PT := T#100ms)
