@@ -42,3 +42,5 @@ END_VAR
     IF GetPower() AND NOT ixFeedback THEN _uFeedbackState := E_StateFeedback.Error_NoFeedback; END_IF;			// 2
     IF NOT GetPower() AND ixFeedback THEN _uFeedbackState := E_StateFeedback.Error_UnexpectedFeedback; END_IF;	// 3
 END_METHOD
+
+END_FUNCTION_BLOCK
