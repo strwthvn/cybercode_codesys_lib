@@ -5,25 +5,40 @@ END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
+	_uFeedbackState : E_FeedbackState;
 END_VAR
-
+    
+    UpdateState();
 
 METHOD GetFeedbackWithoutPower : BOOL
 VAR_INPUT
 END_VAR
-    GetFeedbackWithoutPower := NOT GetPower() AND ixFeedback;
+    GetFeedbackWithoutPower := _uFeedbackState = E_FeedbackState.Error_UnexpectedFeedback;
 END_METHOD
 
 METHOD GetPowerAndFeedback : BOOL
 VAR_INPUT
 END_VAR
-    GetPowerAndFeedback := GetPower() AND ixFeedback;
+    GetPowerAndFeedback := _uFeedbackState = E_FeedbackState.Active;
 END_METHOD
 
 METHOD GetPowerWithoutFeedback : BOOL
 VAR_INPUT
 END_VAR
-    GetPowerWithoutFeedback := GetPower() AND NOT ixFeedback;
+    GetPowerWithoutFeedback := _uFeedbackState = E_FeedbackState.Error_NoFeedback;
 END_METHOD
 
+METHOD GetState : UINT
+VAR_INPUT
+END_VAR
+    GetState := _uFeedbackState;
+END_METHOD
 
+METHOD PROTECTED UpdateState
+VAR_INPUT
+END_VAR
+    IF NOT GetPower() AND NOT ixFeedback THEN _uFeedbackState := E_FeedbackState.Inactive; END_IF; 				// 0
+    IF GetPower() AND ixFeedback THEN _uFeedbackState := E_FeedbackState.Active; END_IF; 						// 1
+    IF GetPower() AND NOT ixFeedback THEN _uFeedbackState := E_FeedbackState.Error_NoFeedback; END_IF;			// 2
+    IF NOT GetPower() AND ixFeedback THEN _uFeedbackState := E_FeedbackState.Error_UnexpectedFeedback; END_IF;	// 3
+END_METHOD
