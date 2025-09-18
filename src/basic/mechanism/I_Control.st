@@ -1,0 +1,4 @@
+INTERFACE I_Control
+    METHOD Start
+    METHOD Stop
+END_INTERFACE
