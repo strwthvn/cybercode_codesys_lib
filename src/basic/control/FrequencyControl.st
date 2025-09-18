@@ -1,0 +1,13 @@
+FUNCTION_BLOCK FrequencyControl
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_rFrequency : REFERENCE TO REAL;
+	_rSetFrequency : REAL;
+    
+END_VAR
+
+
+END_FUNCTION_BLOCK
