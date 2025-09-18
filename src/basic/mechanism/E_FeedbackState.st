@@ -1,4 +1,4 @@
-TYPE E_FeedbackState  :
+TYPE E_StateFeedback  :
 (
     Inactive                   := 0,   // Обратная связь неактивна (норма при остановке)
     Active                     := 1,   // Обратная связь активна (норма при работе)
