@@ -7,32 +7,7 @@ END_VAR
 VAR
 	_xConditionToStart 	: BOOL; 	// Условия для старта
 	_xConditionToStop	: BOOL; 	// Условия для остановки
-	_xConditionToAutoStop	: BOOL; // Условия для автоматической остановки 
-	_xStateAutoStopped	: BOOL; 	// Был автоматически остановлен
 END_VAR
-
-AutoStop();
-
-METHOD PROTECTED AutoStop
-VAR_INPUT
-END_VAR
-    IF _xConditionToAutoStop THEN
-        ref_fbMechanism.Stop();
-        _xStateAutoStopped := TRUE;
-    END_IF
-END_METHOD
-
-METHOD GetStateAutoStopped : BOOL
-VAR_INPUT
-END_VAR
-    GetStateAutoStopped := _xStateAutoStopped;
-END_METHOD
-
-METHOD Reset
-VAR_INPUT
-END_VAR
-    _xStateAutoStopped := FALSE;
-END_METHOD
 
 METHOD SetConditionToStart
 VAR_INPUT
