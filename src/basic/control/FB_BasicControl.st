@@ -1,4 +1,4 @@
-FUNCTION_BLOCK BasicControl
+FUNCTION_BLOCK FB_BasicControl
 VAR_INPUT
 	ref_fbMechanism : REFERENCE TO FB_Mechanism;
 END_VAR
