@@ -28,7 +28,7 @@ END_VAR
     GetPowerWithoutFeedback := _uFeedbackState = E_StateFeedback.Error_NoFeedback;
 END_METHOD
 
-METHOD GetState : UINT
+METHOD GetState : E_StateFeedback
 VAR_INPUT
 END_VAR
     GetState := _uFeedbackState;
