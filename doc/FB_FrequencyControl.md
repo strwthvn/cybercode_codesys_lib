@@ -45,7 +45,6 @@
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD Calculate
@@ -77,7 +76,6 @@ END_VAR
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD SetFrequencyTarget
@@ -100,7 +98,6 @@ END_VAR
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD SetFrequencyDirect
@@ -123,7 +120,6 @@ END_VAR
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD GetCurrentFrequency : REAL
@@ -139,7 +135,6 @@ METHOD GetCurrentFrequency : REAL
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD GetTargetFrequency : REAL
@@ -155,7 +150,6 @@ METHOD GetTargetFrequency : REAL
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD Reset
@@ -175,7 +169,6 @@ METHOD Reset
 
 **Прототип:**
 
-pascal
 
 ```pascal
 METHOD Hold
