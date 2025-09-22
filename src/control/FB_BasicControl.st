@@ -1,6 +1,6 @@
 FUNCTION_BLOCK FB_BasicControl
 VAR_INPUT
-	ref_fbMechanism : REFERENCE TO FB_Mechanism;
+	ControlInterface : I_Control;
 END_VAR
 VAR_OUTPUT
 END_VAR
